@@ -30,4 +30,16 @@ jobs:
       # config pointing at this repo + workflow filename, so npm
       # exchanges the GH Actions OIDC token for publish access
       # at runtime — no NPM_TOKEN needed.
-      - run: npm publish --provenance --access public
+      #
+      # Pre-release tags (anything with a hyphen suffix like
+      # 0.1.0-pre.3) go under the `next` dist-tag so they don't
+      # accidentally become `latest` for `npm install`. Stable
+      # tags publish to `latest`.
+      - name: Publish to npm
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [[ "$VERSION" == *-* ]]; then
+            npm publish --provenance --access public --tag next
+          else
+            npm publish --provenance --access public
+          fi

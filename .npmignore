@@ -1,0 +1,13 @@
+src/
+test/
+examples/
+.github/
+node_modules/
+coverage/
+test-results/
+playwright-report/
+*.config.ts
+tsconfig.json
+.gitignore
+.npmignore
+PLAN.md

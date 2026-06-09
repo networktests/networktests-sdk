@@ -22,6 +22,7 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
+      # Authenticates to npm via GitHub OIDC (Trusted Publishing).
+      # No NPM_TOKEN secret needed — npm verifies the GH Actions OIDC
+      # token against the trusted publisher config for this package.
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

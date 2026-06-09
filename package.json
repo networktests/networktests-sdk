@@ -1,5 +1,5 @@
 {
-  "name": "@networktests/sdk",
+  "name": "@networkdiagnostics/sdk",
   "version": "0.1.0-pre.1",
   "description": "Browser SDK for the networktests.com API — UDP throughput and DNS-leak probes.",
   "license": "MIT",

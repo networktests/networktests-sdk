@@ -1,4 +1,4 @@
-// Public types for @networktests/sdk.
+// Public types for @networkdiagnostics/sdk.
 //
 // These mirror the shapes returned by api.networktests.com/v1 — the
 // customer's backend calls POST /v1/probe/.../sessions, gets one of the

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>@networktests/sdk — vanilla HTML demo</title>
+  <title>@networkdiagnostics/sdk — vanilla HTML demo</title>
   <style>
     body { font: 14px/1.4 system-ui, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
     pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; overflow-x: auto; }
@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-  <h1>@networktests/sdk — vanilla demo</h1>
+  <h1>@networkdiagnostics/sdk — vanilla demo</h1>
   <p>
     Replace <code>SESSION_ENDPOINT</code> below with a URL on your own backend that
     proxies to <code>POST /v1/probe/udp/sessions</code> with your API key.
@@ -18,7 +18,7 @@
   <button id="run">Run UDP test</button>
   <pre id="out">Click "Run UDP test" to begin.</pre>
 
-  <script src="https://cdn.jsdelivr.net/npm/@networktests/sdk@0/dist/networktests.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@networkdiagnostics/sdk@0/dist/networktests.umd.js"></script>
   <script>
     const SESSION_ENDPOINT = "/my-backend/start-udp";
     const out = document.getElementById("out");

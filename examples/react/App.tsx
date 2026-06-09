@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useUdpTest } from "@networktests/sdk/react";
-import type { UdpSession } from "@networktests/sdk";
+import { useUdpTest } from "@networkdiagnostics/sdk/react";
+import type { UdpSession } from "@networkdiagnostics/sdk";
 
 const SESSION_ENDPOINT = "/my-backend/start-udp";
 

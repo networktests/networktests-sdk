@@ -1,9 +1,9 @@
-# @networktests/sdk
+# @networkdiagnostics/sdk
 
 Browser SDK for the [networktests.com API](https://api.networktests.com/v1/docs). Run UDP throughput tests and DNS-leak probes from your frontend without reimplementing WebRTC signaling or DNS query orchestration.
 
 ```
-npm install @networktests/sdk
+npm install @networkdiagnostics/sdk
 ```
 
 ## Why an SDK?
@@ -59,7 +59,7 @@ res.json(data);
 **Frontend**:
 
 ```ts
-import { NetworkTests } from "@networktests/sdk";
+import { NetworkTests } from "@networkdiagnostics/sdk";
 
 const nt = new NetworkTests();
 const session = await fetch("/my-backend/start-udp").then(r => r.json());
@@ -92,7 +92,7 @@ res.json(data);
 **Frontend**:
 
 ```ts
-import { NetworkTests } from "@networktests/sdk";
+import { NetworkTests } from "@networkdiagnostics/sdk";
 
 const nt = new NetworkTests();
 const session = await fetch("/my-backend/start-leak-test").then(r => r.json());
@@ -107,7 +107,7 @@ const leak = await fetch(`/my-backend/leak-results/${session.sessionId}`)
 ## React
 
 ```tsx
-import { useUdpTest } from "@networktests/sdk/react";
+import { useUdpTest } from "@networkdiagnostics/sdk/react";
 
 function SpeedTest({ session }) {
   const { run, isRunning, progress, result, error } = useUdpTest();
@@ -122,7 +122,7 @@ function SpeedTest({ session }) {
 ## CDN drop-in (no build step)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@networktests/sdk@0/dist/networktests.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@networkdiagnostics/sdk@0/dist/networktests.umd.js"></script>
 <script>
   const nt = new NetworkTests.NetworkTests();
   // ...
@@ -164,7 +164,7 @@ import {
   NetworkTestsError,   // base class with .code
   AbortError,          // signal fired
   TimeoutError,        // exceeded timeoutMs
-} from "@networktests/sdk";
+} from "@networkdiagnostics/sdk";
 ```
 
 Common `code` values: `WS_ERROR`, `WS_CLOSED`, `DC_ERROR`, `DC_CLOSED`, `SERVER_ERROR`, `TEST_STOPPED`, `BAD_STATE`, `UNKNOWN`.

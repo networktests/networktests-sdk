@@ -5,6 +5,13 @@ All notable changes to `@networkdiagnostics/sdk` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0-pre.3] — 2026-06-09
+
+### Fixed
+- Upgrade npm to latest in the release workflow. Trusted Publishing
+  requires npm ≥ 11.5.1; setup-node@v4 with Node 20 ships npm 10.x
+  which silently falls back to anonymous auth and returns 404 on PUT.
+
 ## [0.1.0-pre.2] — 2026-06-09
 
 ### Changed

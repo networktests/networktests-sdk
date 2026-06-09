@@ -5,6 +5,17 @@ All notable changes to `@networkdiagnostics/sdk` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0-pre.2] — 2026-06-09
+
+### Changed
+- Switched release workflow from NPM_TOKEN to npm Trusted Publishing (OIDC).
+  Auth is now performed via the GitHub Actions OIDC token at publish time;
+  no long-lived token in CI secrets.
+
+## [0.1.0-pre.1] — 2026-06-09
+
+First test publish to verify the end-to-end pipeline.
+
 ## [Unreleased]
 
 ### Added

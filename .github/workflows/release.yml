@@ -22,11 +22,9 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
-      # First publish uses an NPM_TOKEN (granular, scoped to
-      # @networkdiagnostics, bypass-2FA enabled) because trusted
-      # publishing can't be pre-configured for a not-yet-existing
-      # package on this org. Switch to Trusted Publishing in a
-      # follow-up commit once the package exists on npm.
+      # Authenticates via npm Trusted Publishing (OIDC). The
+      # @networkdiagnostics/sdk package has a trusted publisher
+      # config pointing at this repo + workflow filename, so npm
+      # exchanges the GH Actions OIDC token for publish access
+      # at runtime — no NPM_TOKEN needed.
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
